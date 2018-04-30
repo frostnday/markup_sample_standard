@@ -221,14 +221,19 @@ a:link, a:visited, a:hover, a:active {
  * main
  * -------------------------------- */
 .article-box {
+    position: relative;
     display: block;
     width: 315px;
+    height: 360px;
     margin-bottom: 30px;
+    padding: 210px 15px 0;
+    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
+    transition: opacity 0.15;
 }
 .article-box:nth-of-type(odd) {
     float: left;
 }
-.article-boc:nth-of-type(even) {
+.article-box:nth-of-type(even) {
     float: right;
 }
 .article-box .title {
@@ -243,4 +248,24 @@ a:link, a:visited, a:hover, a:active {
     overflow: hidden;   /* はみ出しを非表示*/
     text-overflow: ellipsis;   /* はみ出しを...にする*/
     white-space: nowrap;   /* 折り返し禁止*/
+}
+.article-box .date {
+    position: absolute;
+    right: 0;
+    bottom: 15px;
+    display: block;
+    width: 160px;
+    padding: 4px;
+    background-color: #b5d264;
+    color: #2d3d54;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.article-box .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
