@@ -18,4 +18,16 @@ module.exports = {
     dest: dest,
     options: {pretty: true}
   },
+
+  stylus: {
+    src: [
+      src + '/styl/**/!(_)*'
+    ],
+    dest: dest + '/css/',
+    output: 'main.css',  // 出力ファイル名
+    autoprefixer: {
+      browsers: ['last 2 versions']
+    },
+    minify: false
+  },
 }
