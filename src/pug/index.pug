@@ -1,0 +1,115 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="UTF-8")
+    title
+      | 練習スタンダード
+    link(rel="stylesheet",href="css/reset.css")
+    link(rel="stylesheet",href="css/style.css")
+  body
+    header(class="header")
+      h1.logo
+        a(href="/")
+          | SAMPLE SITE
+      nav.global-nav
+        ul
+          li.nav-item.active
+            a(href="#")
+              | HOME
+          li.nav-item
+            a(href="#")
+              | ABOUT
+          li.nav-item
+            a(href="#")
+              | NEWS
+          li.nav-item
+            a(href="#")
+              | TOPICS
+          li.nav-item
+            a("#")
+              | DOCS
+          li.nav-item
+            a(href="#")
+              | BLOG
+      div.wrapper.clearfix
+      main.main
+        h2.hiddenHOT
+          | TOPIC
+        a(href="#").hot-topic.clearfix
+          img.image(src="./images/hot-topic.jpg" alt="コーディング画面")
+          div.content
+            h3.title
+              | 実務で使えるHTML/CSS
+              | モダンコーディングTIPS
+            p.desc
+              | Webフロントエンドの進化の勢いはとどまるところ
+              | 知りません。新しい要素が増えて大幅に表現が広がったHTML5/CSS3を活用して...
+            time.date(datetime="2015-09=01")
+              | 2015.09.01 TUE
+        h2.heading
+          | NEWS
+        ul.scroll-list
+          li.scroll-item
+            a(href="#")
+            time.date(datetime="2015-08-23")
+              | 2015.08.23 SUN
+            span.category.news
+              | NEWS
+            span.title
+              | WORKSを更新しました
+          li.scroll-item
+            a(href="#")
+            time.date(datetime="2015-08-12")
+              | 2015.08.12 WED
+            span.category
+              | TOPIC
+            span.title
+              | CSSでここまでできる！？ホントに使えるCSSセレクタ10選！
+            h2.hidden
+              | ARTICLES
+            div.clearfix
+              a(href="#").article-box
+                h3.title
+                  | 実務で使えるHTML/CSSモダンコーディングTIPS
+                p.desc
+                  | 新しい要素が増えて大幅に表現力が広がったHTML5/CSS3を活用し、モダンなコーディングにチャレンジしましょう
+                time.date(datetime="2015-06-17")
+                  | 2015.06.17 WED
+                img.image(src="./images/article.jpg" alt="コーディング画面")
+              a(href="#").article-box
+                h3.title
+                  | 実務で使えるHTML/CSSモダンコーディングTIPS
+                p.desc
+                  | 新しい要素が増えて大幅に表現力が広がったHTML5/CSS3を活用し、モダンなコーディングにチャレンジしましょう
+                time.date(datetime="2015-06-17")
+                  | 2015.06.17 WED
+                img.image(src="./images/article.jpg" alt="コーディング画面")
+      div.sidemenu
+        h2.heading
+          | RANKING
+          ol.ranking
+            li.ranking-item
+              a(href="#")
+              img.image(src="./images/ranking.jpg" alt="グラフの画像")
+              span.order
+              p.text
+                | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+            li.ranking-item
+              a(href="#")
+              img.image(src="./images/ranking.jpg" alt="グラフの画像")
+              span.order
+              p.text
+                | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+              li.ranking-item
+                a(href="#")
+                img.image(src="./images/ranking.jpg" alt="グラフの画像")
+                span.order
+                p.text
+                  | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+              li.ranking-item
+                a(href="#")
+                img.image(src="./images/ranking.jpg" alt="グラフの画像")
+                span.order
+                p.text
+                  | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+
