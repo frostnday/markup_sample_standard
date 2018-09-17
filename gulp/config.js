@@ -16,6 +16,7 @@ module.exports = {
       src + '/**/!(_)*.pug'
     ],
     dest: dest,
+    output: 'index.html',  // 出力ファイル名
     options: {pretty: true}
   },
 

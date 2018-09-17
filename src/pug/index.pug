@@ -2,114 +2,145 @@ doctype html
 html(lang="ja")
   head
     meta(charset="UTF-8")
-    title
-      | 練習スタンダード
-    link(rel="stylesheet",href="css/reset.css")
-    link(rel="stylesheet",href="css/style.css")
+    title 練習スタンダード
+    link(rel="stylesheet",href="../css/main.css")
   body
+    //- ヘッダー
     header(class="header")
       h1.logo
-        a(href="/")
-          | SAMPLE SITE
+        a(href="/") SAMPLE SITE
       nav.global-nav
         ul
           li.nav-item.active
-            a(href="#")
-              | HOME
+            a(href="#") HOME
           li.nav-item
-            a(href="#")
-              | ABOUT
+            a(href="#") ABOUT
           li.nav-item
-            a(href="#")
-              | NEWS
+            a(href="#") NEWS
           li.nav-item
-            a(href="#")
-              | TOPICS
+            a(href="#") TOPICS
           li.nav-item
-            a("#")
-              | DOCS
+            a(href="#") DOCS
           li.nav-item
-            a(href="#")
-              | BLOG
-      div.wrapper.clearfix
+            a(href="#") BLOG
+
+    //- メインコンテンツ
+    div.wrapper.clearfix
       main.main
-        h2.hiddenHOT
-          | TOPIC
+        //- トピック
+        h2.hidden HOT TOPIC
         a(href="#").hot-topic.clearfix
-          img.image(src="./images/hot-topic.jpg" alt="コーディング画面")
+          img.image(src="../images/hot-topic.jpg" alt="コーディング画面")
           div.content
             h3.title
               | 実務で使えるHTML/CSS
+              br
               | モダンコーディングTIPS
             p.desc
               | Webフロントエンドの進化の勢いはとどまるところ
               | 知りません。新しい要素が増えて大幅に表現が広がったHTML5/CSS3を活用して...
             time.date(datetime="2015-09=01")
               | 2015.09.01 TUE
-        h2.heading
-          | NEWS
+
+        //- ニュース
+        h2.heading NEWS
         ul.scroll-list
           li.scroll-item
             a(href="#")
-            time.date(datetime="2015-08-23")
-              | 2015.08.23 SUN
-            span.category.news
-              | NEWS
-            span.title
-              | WORKSを更新しました
+              time.date(datetime="2015-08-23") 2015.08.23 SUN
+              span.category.news NEWS
+              span.title WORKSを更新しました
           li.scroll-item
             a(href="#")
-            time.date(datetime="2015-08-12")
-              | 2015.08.12 WED
-            span.category
-              | TOPIC
-            span.title
-              | CSSでここまでできる！？ホントに使えるCSSセレクタ10選！
-            h2.hidden
-              | ARTICLES
-            div.clearfix
-              a(href="#").article-box
-                h3.title
-                  | 実務で使えるHTML/CSSモダンコーディングTIPS
-                p.desc
-                  | 新しい要素が増えて大幅に表現力が広がったHTML5/CSS3を活用し、モダンなコーディングにチャレンジしましょう
-                time.date(datetime="2015-06-17")
-                  | 2015.06.17 WED
-                img.image(src="./images/article.jpg" alt="コーディング画面")
-              a(href="#").article-box
-                h3.title
-                  | 実務で使えるHTML/CSSモダンコーディングTIPS
-                p.desc
-                  | 新しい要素が増えて大幅に表現力が広がったHTML5/CSS3を活用し、モダンなコーディングにチャレンジしましょう
-                time.date(datetime="2015-06-17")
-                  | 2015.06.17 WED
-                img.image(src="./images/article.jpg" alt="コーディング画面")
+              time.date(datetime="2015-08-12") 2015.08.12 WED
+              span.category TOPIC
+              span.title CSSでここまでできる！？ホントに使えるCSSセレクタ10選！
+
+        //- 記事
+        h2.hidden ARTICLES
+        div.clearfix
+          a(href="#").article-box
+            h3.title 実務で使えるHTML/CSSモダンコーディングTIPS
+            p.desc 新しい要素が増えて大幅に表現力が広がったHTML5/CSS3を活用し、モダンなコーディングにチャレンジしましょう
+            time.date(datetime="2015-06-17") 2015.06.17 WED
+            img.image(src="../images/article.jpg" alt="コーディング画面")
+          a(href="#").article-box
+            h3.title 実務で使えるHTML/CSSモダンコーディングTIPS
+            p.desc 新しい要素が増えて大幅に表現力が広がったHTML5/CSS3を活用し、モダンなコーディングにチャレンジしましょう
+            time.date(datetime="2015-06-17") 2015.06.17 WED
+            img.image(src="../images/article.jpg" alt="コーディング画面")
+
+
+      //- サイドメニュー
       div.sidemenu
-        h2.heading
-          | RANKING
-          ol.ranking
-            li.ranking-item
-              a(href="#")
-              img.image(src="./images/ranking.jpg" alt="グラフの画像")
+        h2.heading RANKING
+        ol.ranking
+          li.ranking-item
+            a(href="#")
+              img.image(src="../images/ranking.jpg" alt="グラフの画像")
               span.order
-              p.text
-                | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
-            li.ranking-item
-              a(href="#")
-              img.image(src="./images/ranking.jpg" alt="グラフの画像")
+              p.text HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+          li.ranking-item
+            a(href="#")
+              img.image(src="../images/ranking.jpg" alt="グラフの画像")
               span.order
-              p.text
-                | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
-              li.ranking-item
-                a(href="#")
-                img.image(src="./images/ranking.jpg" alt="グラフの画像")
-                span.order
-                p.text
-                  | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
-              li.ranking-item
-                a(href="#")
-                img.image(src="./images/ranking.jpg" alt="グラフの画像")
-                span.order
-                p.text
-                  | HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+              p.text HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+          li.ranking-item
+            a(href="#")
+              img.image(src="../images/ranking.jpg" alt="グラフの画像")
+              span.order
+              p.text HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+          li.ranking-item
+            a(href="#")
+              img.image(src="../images/ranking.jpg" alt="グラフの画像")
+              span.order
+              p.text HTML/CSSコーディングと切っても切れないwebブラウザのシェア動向をチェックしよう
+        h2.heading DOCUMENTS
+        ul.documents
+          li
+            h3.title HTML5
+            ul
+              li
+                a(href="#") 追加された要素
+              li
+                a(href="#") 削除された要素
+              li
+                a(href="#") 意味が変わった要素
+              li
+                a(href="#") HTML5のコンテンツモデル
+          li
+            h3.title CSS3
+            ul
+              li
+                a(href="#") 追加されたプロパティ
+              li
+                a(href="#") 追加されたセレクタ
+              li
+                a(href="#") 追加された単位
+          li
+            h3.title Sass, Less, Stylus
+            p 準備中
+          li
+            h3.title TypeScript
+            p 準備中
+        h2.hidden SEARCH
+        form.search-box
+          input.search-input(type="text" name="search" placeholder="SEAECH")
+          input.search-button(type="submit" value="検索")
+          p.text サイト内の文章を検索できます。
+
+  footer.footer
+    ul.horizontal-list
+      li.horizontal-item
+        a(href="#") ABOUT ME
+      li.horizontal-item
+        a(href="#") SITE MAP
+      li.horizontal-item
+        a(href="#") SNS
+      li.horizontal-item
+        a(href="#") CONTACT
+    p.copyright Copyright © 2018 frostnday
+
+
+
 

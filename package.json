@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "pug": "gulp pug",
+    "stylus": "gulp stylus",
+    "dev": "gulp pug stylus"
   },
   "repository": "git@github.com:frostnday/markup_sample_standard.git",
   "author": "frostnday <frostnday@gmail.com>",

@@ -1,345 +1,413 @@
-@charset "UTF-8";
+@charset "UTF-8"
 
+backBlack = #2d3d54
 /* ------------------------------------
  * ベース
  * ------------------------------------*/
 
-html {
-    font-size: 62.5%;
-}
-body {
-    color: #333;
-    font-size: 1.2rem;
-    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-}
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-a:link, a:visited, a:hover, a:active {
-    color: #d03c56;
-    text-decoration: none;   /* リンクの下線を外している */
-}
+html
+  font-size: 62.5%
+
+body
+  color: #333
+  font-size: 1.2rem
+  font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif
+
+*, *::before, *::after
+  box-sizing: border-box
+
+a:link, a:visited, a:hover, a:active
+  color: #d03c56
+  text-decoration: none;   /* リンクの下線を外している */
 
 /* ------------------------------------
  * パーツ
  * ------------------------------------*/
- .clearfix::after {
-    content: '';
-    display: block;
-    clear: both;
-}
-.heading {
-    padding: 10px 12px;
-    background: url('../images/bg-slash.gif');
-    letter-spacing: 1px;
-    font-size: 1.6rem;
-}
-.hidden {
-    display: none;
-}
+.clearfix::after
+  content: ''
+  display: block
+  clear: both
+
+.heading
+  padding: 10px 12px
+  background: url('../images/bg-slash.gif')
+  letter-spacing: 1px
+  font-size: 1.6rem
+
+.hidden
+  display: none
+
 
 
 /* ------------------------------------
  * header
  * ------------------------------------*/
- .header {
-    width: 100%;
-    padding: 28px 0 10px;
-    background: url('../images/bg-header.gif') repeat-x;
-    box-shadow: 0 0 10px 1px #e3e3e3;
-}
-.logo {
-    width: 225px;
-    height: 56px;
-    margin: 0 auto;
-    background: url('../images/logo.png') no-repeat;
-    overflow: hidden;
-    text-indent: 100%;
-    white-space: nowrap;
-}
-.logo a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.global-nav {
-    margin-top: 15px;
-    text-align: center;
-}
-.global-nav .nav-item {
-    display: inline-block;
-    margin: 0 10px;
-}
-.global-nav .nav-item a {
-    display: inline-block;
-    width: 100px;
-    height: 30px;
-    line-height: 30px;
-    text-align: center;
-    border-radius: 8px;
-    color: #666;
-    font-size: 1.3rem;
-    letter-spacing: 1px;
-    transition: 0.2s;
-}
+.header
+  width: 100%
+  padding: 28px 0 10px
+  background: url('../images/bg-header.gif') repeat-x
+  box-shadow: 0 0 10px 1px #e3e3e3
+
+.logo
+  width: 225px
+  height: 56px
+  margin: 0 auto
+  background: url('../images/logo.png') no-repeat
+  overflow: hidden
+  text-indent: 100%
+  white-space: nowrap
+
+  > a
+    display: block
+    width: 100%
+    height: 100%
+
+.global-nav
+  margin-top: 15px
+  text-align: center
+
+  .nav-item
+    display: inline-block
+    margin: 0 10px
+
+    > a
+      display: inline-block
+      width: 100px
+      height: 30px
+      line-height: 30px
+      text-align: center
+      border-radius: 8px
+      color: #666
+      font-size: 1.3rem
+      letter-spacing: 1px
+      transition: 0.2s
+
 .global-nav .nav-item.active a,
-.global-nav .nav-item a:hover {
-    background-color: #d03c56;
-    color: #fff;
-}
+.global-nav .nav-item a:hover
+  background-color: #d03c56
+  color: #fff
+
 
 
 /* --------------------------------
  * wrapper
  * -------------------------------- */
-.wrapper {
-    width: 970px;
-    margin: 30px auto 40px;
-}
+.wrapper
+  width: 970px
+  margin: 30px auto 40px
 
 
 /* --------------------------------
  * main
  * -------------------------------- */
-.main {
-    display: block;
-    float: left;
-    width: 660px;
-}
-.hot-topic {
-    display: block;
-    height: 300px;
-    margin-bottom: 30px;
-    box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15);   /* 要素に影をつける */
-    transition: opacity 0.15s;
-}
-.hot-topic:hover {
-    opacity: 0.85;
-}
+.main
+  display: block
+  float: left
+  width: 660px
 
-.hot-topic .image {
-    float: left;
-    width: 50%;
-    height: 100%;
-}
+.hot-topic
+  display: block
+  height: 300px
+  margin-bottom: 30px
+  box-shadow: 0 6px 4px -4px rgba(0, 0, 0, 0.15)   /* 要素に影をつける */
+  transition: opacity 0.15s
 
-.hot-topic .content {
-    position: relative;
-    float: left;
-    width: 50%;
-    height: 100%;
-    padding: 105px 25px 0;
-    background-color: #2d3d54;
-    line-height: 1.6;
-}
-.hot-topic .title {
-    margin-bottom: 15px;
-    color: #fff;
-    font-weight: normal;
-    font-size: 2.0rem;
-}
-.hot-topic .desc {
-    color: #ddc;
-}
-.hot-topic .date {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 140px;
-    padding: 4px;
-    background-color: #fff;
-    color: #2d3d54;
-    text-align: center;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    line-height: 1;
-}
-.sidemenu{
-    float: right;
-    width: 275px;
-}
-.footer {
-    width: 100%;
-}
+  &:hover
+    opacity: 0.85
+
+  .image
+    float: left
+    width: 50%
+    height: 100%
+
+  .content
+    position: relative
+    float: left
+    width: 50%
+    height: 100%
+    padding: 105px 25px 0
+    background-color: backBlack
+    line-height: 1.6
+    /*
+    文字サイズを別で指定してもline-heightを指定した要素のfont-sizeにもとついた文字の高さが設定されるので
+    文字が重なったりしてしまう
+
+    ただし、line-heightに上記のように数値のみを指定すると、それぞれの要素の文字サイズに応じた高さを設定してくれるので
+    line-heightは数値のみで指定するべきである
+
+    */
+
+  .title
+    margin-bottom: 15px
+    color: #fff
+    font-weight: normal
+    font-size: 2.0rem
+
+  .desc
+    color: #ddc
+
+  .date
+    position: absolute
+    top: 60px
+    left: 0
+    width: 140px
+    padding: 4px
+    background-color: #fff
+    color: backBlack
+    text-align: center
+    letter-spacing: 1px
+    font-weight: bold
+    font-size: 1.1rem
+    line-height: 1
+
+.sidemenu
+  float: right
+  width: 275px
+
+.footer
+  width: 100%
+
 
 /* --------------------------------
  * 新着
  * -------------------------------- */
-.scroll-list {
-    max-height: 220px;
-    overflow-y: auto;   /* 縦方向にmaxを超えたらスクロールをつける*/
-    margin-bottom: 30px;
-    list-style-type: none;
-}
-.scroll-list .scroll-item a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    font-size: 0;
-    transition: background-color 0.5s;
-}
-.scroll-list .scroll-item:nth-of-type(even) a {
-    background: url('../images/bg-slash.gif');
-}
-.scroll-list .scroll-item a:hover {
-    background-color: #535e6d;
-    color: #fff;
-}
-.scroll-list .date {
-    display: inline-block;
-    width: 19%;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 1.0rem;
-}
-.scroll-list .category {
-    display: inline-block;
-    width: 8%;
-    border-radius: 5px;
-    background-color: #d03c56;
-    color: #fff;
-    text-align: center;
-    letter-spacing: 1px;   /* 文字間のスペース*/
-    font-size: 1.0rem;
-    line-height: 16px;  /* 文字の上と下のスペース */
-}
-.scroll-list .title {
-    display: inline-block;
-    width: 73%;
-    padding-left: 15px;
+.scroll-list
+  max-height: 220px
+  overflow-y: auto   /* 縦方向にmaxを超えたらスクロールをつける*/
+  margin-bottom: 30px
+  list-style-type: none
+
+  .date
+    display: inline-block
+    width: 19%
+    letter-spacing: 1px
+    font-weight: bold
+    font-size: 1.0rem
+
+  .category
+    display: inline-block
+    width: 8%
+    border-radius: 5px
+    background-color: #d03c56
+    color: #fff
+    text-align: center
+    letter-spacing: 1px   /* 文字間のスペース*/
+    font-size: 1.0rem
+    line-height: 16px  /* 文字の上と下のスペース */
+    .news
+      background-color: #2c3c53
+
+  .title
+    display: inline-block
+    width: 73%
+    padding-left: 15px
     overflow: hidden;   /* はみ出しを非表示*/
     text-overflow: ellipsis;   /* はみ出しを...にする*/
     white-space: nowrap;   /* 折り返し禁止*/
-    font-size: 1.0rem;
-}
-.scroll-list .category.news {
-    background-color: #2c3c53;
-}
+    font-size: 1.0rem
+
+  .scroll-item
+    a
+      display: block
+      padding: 10px 15px
+      color: #333
+      font-size: 0
+      transition: background-color 0.5s
+
+      &:hover
+        background-color: #535e6d
+        color: #fff
+
+    :nth-of-type(even) /* 要素が奇数の場合のみ */
+      a
+        background: url('../images/bg-slash.gif')
+
 
 /* --------------------------------
- * main
+ * 記事
  * -------------------------------- */
-.article-box {
-    position: relative;
-    display: block;
-    width: 315px;
-    height: 360px;
-    margin-bottom: 30px;
-    padding: 210px 15px 0;
-    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15);
-    transition: opacity 0.15;
-}
-.article-box:nth-of-type(odd) {
-    float: left;
-}
-.article-box:nth-of-type(even) {
-    float: right;
-}
-.article-box .title {
-    margin-top: 30px;
-    color: #555;
-    font-size: 1.4rem;
+.article-box
+  position: relative
+  display: block
+  width: 315px
+  height: 360px
+  margin-bottom: 30px
+  padding: 210px 15px 0
+  box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.15)
+  transition: opacity 0.15
+  &:nth-of-type(odd)
+    float: left
+  &:nth-of-type(even)
+    float: right
+  &:hover
+    opacity: 0.8
+  .title
+    margin-top: 30px
+    color: #555
+    font-size: 1.4rem
     line-height: 1.6; /* 文字の上と下のスペース */
-}
-.article-box .desc {
-    margin-top: 5px;
-    color: #333;
+  .desc
+    margin-top: 5px
+    color: #333
     overflow: hidden;   /* はみ出しを非表示*/
     text-overflow: ellipsis;   /* はみ出しを...にする*/
     white-space: nowrap;   /* 折り返し禁止*/
-}
-.article-box .date {
-    position: absolute;
-    right: 0;
-    bottom: 15px;
-    display: block;
-    width: 160px;
-    padding: 4px;
-    background-color: #b5d264;
-    color: #2d3d54;
-    text-align: center;
-    letter-spacing: 1px;
-    font-weight: bold;
-    font-size: 1.1rem;
-}
-.article-box .image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
+  .date
+    position: absolute
+    right: 0
+    bottom: 15px
+    display: block
+    width: 160px
+    padding: 4px
+    background-color: #b5d264
+    color: backBlack
+    text-align: center
+    letter-spacing: 1px
+    font-weight: bold
+    font-size: 1.1rem
+  .image
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
 
 /* --------------------------------
  * ランキング
  * -------------------------------- */
-.ranking {
-    margin-bottom: 30px;
-    list-style-type: none; /* デフォルトの通し番後を消している */
-    counter-reset: ranking;/* カウンタの初期化 */
-}
-.ranking .ranking-item {
-    margin-top: 15px;
-}
-.ranking .ranking-item a {
-    display: block;
-    font-size: 0; /* 隙間を消す */
-    transition: opacity 0.15s;
-}
-.ranking .ranking-item a:hover {
-    opacity: 0.8;
-}
-.ranking .image {
-    width: 55px;
-    height: 55px;
-}
-.ranking .text {
-    display: inline-block; /* displayとinlineの中間で幅と高さは指定できるけど横並びになる */
-    width: 182px;
-    color: #000;
-    vertical-align: top; /* 文字の縦位置をどこ基準にするかの設定 今回の場合topなので上からはみ出る事はない */
-    font-size: 1.2rem;
-    line-height: 1.5; /* 文字の上と下のスペース */
-}
-.ranking .order {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin: 0 10px;
-    border: 1px solid #ccc;
-    color: #aaa;
-    vertical-align: 20px; /* ベースラインから指定値分距離をおいた位置に配置する */
-    text-align: center;
-    font-weight: bold;
-    line-height: 16px; /* 文字の上と下のスペース */
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-}
-.ranking .ranking-item:nth-of-type(1) .order, /* 特定要素の特定の順番に対して指定できる */
-.ranking .ranking-item:nth-of-type(2) .order,
-.ranking .ranking-item:nth-of-type(3) .order {
-    border: none;
-    font-weight: normal;
-    line-height: 18px;
-    color: #fff;
-}
-.ranking .ranking-item:nth-of-type(1) .order {
-    background-color: #dab413;
-}
-.ranking .ranking-item:nth-of-type(2) .order {
-    background-color: #6e7b84;
-}
-.ranking .ranking-item:nth-of-type(3) .order {
-    background-color: #a0541a;
-}
-.ranking .order::before {
-    content: counter(ranking);/*変数の値を使用*/
-    counter-increment: ranking;/*変数の値をインクリメント*/
-    display: inline-block;
-    font-size: 1.0rem;
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+order-base() {
+  border: none
+  font-weight: normal
+  line-height: 18px
+  color: #fff
 }
 
+.ranking
+  margin-bottom: 30px
+  list-style-type: none; /* デフォルトの通し番後を消している */
+  counter-reset: ranking; /* カウンタの初期化 */
+  .text
+    display: inline-block; /* displayとinlineの中間で幅と高さは指定できるけど横並びになる */
+    width: 200px
+    color: #000
+    vertical-align: top;  /* 文字の縦位置をどこ基準にするかの設定 今回の場合topなので上からはみ出る事はない */
+    font-size: 1.2rem
+    line-height: 1.5; /* 文字の上と下のスペース */
+    margin-left: 20px
+  .image
+    width: 55px
+    height: 55px
+  .order
+    position: absolute
+    left: 37px
+    top: -3px
+    display: inline-block
+    width: 18px
+    height: 18px
+    margin: 0 10px
+    border: 1px solid #ccc
+    border-radius: 50%
+    color: #aaa
+    vertical-align: 20px; /* ベースラインから指定値分距離をおいた位置に配置する */
+    text-align: center
+    font-weight: bold
+    line-height: 16px; /* 文字の上と下のスペース */
+    background-color: white
+    &:before
+      content: counter(ranking); /*変数の値を使用*/
+      counter-increment: ranking; /*変数の値をインクリメント*/
+      display: inline-block
+      font-size: 1.0rem
+  .ranking-item
+    position relative
+    margin-top: 15px
+    a
+      display: block
+      font-size: 0; /* 隙間を消す */
+      transition: opacity 0.15s
+      &:hover
+        opacity: 0.8
+    &:nth-of-type(1) .order
+      order-base()
+      background-color: #dab413
+    &:nth-of-type(2) .order
+      order-base()
+      background-color: #6e7b84
+    &:nth-of-type(3) .order
+      order-base()
+      background-color: #a0541a
+
+.documents
+  margin:  10px 10px 30px
+  list-style-type: none
+  a
+    &:hover
+      text-decoration: underline
+  ul
+    list-style-type: none
+  > li
+    .title
+      margin: 15px 0px
+      padding-left: 8px
+      border-left: 5px solid #d03c56
+      font-size: 1.4rem
+      line-height: 1.2rem
+    + li
+      margin-top: 25px
+    ul
+      margin: 15px
+      > li
+        margin-bottom: 15px
+        padding-left: 10px
+        background: url('../images/arrow.gif') no-repeat left center
+
+.search-box
+  padding: 15px
+  background-color: #ccc
+  font-size: 0
+  > *
+    font-size: 1.2rem
+  .search-input
+    width: 205px
+    height: 26px
+    padding: 0 10px
+    border: none
+  .search-button
+    width: 40px
+    height: 26px
+    border: none
+    background-color: #d03c56
+    color: #ffffff
+    cursor: pointer
+  .text
+    margin-top: 12px
+
+horizontal-li() {
+  display: inline-block
+  padding: 0 15px
+  letter-spacing: 1px
+}
+.footer
+  width: 100%
+  padding: 20px 0 30px
+  background: #2d3d54 url('../images/bg-footer.gif')
+  color: #fff
+  .horizontal-list
+    width: 970px
+    margin: 0 auto
+    text-align: right
+    font-size: 0
+    .horizontal-item
+      horizontal-li()
+      + .horizontal-item
+        border-left: 1px solid #bbb
+    a
+      border-bottom: 1px dashed #777777
+      color: #bbbbbb
+      font-size: 1.1rem
+      transition: color 0.15s
+      &:hover
+        color: #ddd
+.copyright
+  margin-top: 30px
+  text-align: center
+  letter-spacing: 1px
